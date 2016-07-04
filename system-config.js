@@ -26,6 +26,7 @@ var barrels = [
     // App specific barrels.
     'app',
     'app/shared',
+    'app/detailed-targeting',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
