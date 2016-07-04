@@ -64,7 +64,11 @@ export class FbService {
 
       FB.getLoginStatus(function (response) {
         if (response.status !== 'connected') {
-          FB.login();
+          FB.login((response) => {
+            console.log('Login response: ', response);
+          }, {
+            scope: 'email,ads_management'
+          });
         }
       });
     };
